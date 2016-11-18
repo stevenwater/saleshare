@@ -20,6 +20,8 @@
 		<jetty.version>7.1.6.v20100715</jetty.version>
 		<saleshare-common.version>0.0.1-SNAPSHOT</saleshare-common.version>
 		<spring.version>4.3.4.RELEASE</spring.version>
+		<log4j.version>1.2.14</log4j.version>
+		<freemarker.version>2.3.23</freemarker.version>
 	</properties>
 
 	<dependencies>
@@ -141,6 +143,17 @@
 			<version>${spring.version}</version>
 		</dependency>
 		<!-- spring support end -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>${freemarker.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>
