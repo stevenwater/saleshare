@@ -2,11 +2,12 @@
 <#import "/spring.ftl" as spring/>
 <html> 
 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>freemarker test</title><br> 
 	</head>
 <body><br> 
 	<h1>demo info:</h1><br> 
 	code:${demo.code}<br>
-<@spring.message  hello/>
+	<@spring.message  code ="hello"/>
 </body>
 </html> 
