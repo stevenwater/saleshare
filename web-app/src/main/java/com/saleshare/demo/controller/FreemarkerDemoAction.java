@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.saleshare.demo.Demo;
+import com.saleshare.demo.entity.Demo;
 
 @Controller
 @RequestMapping("/demo")
