@@ -6,14 +6,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 @Entity
-@Table(name = "demo")
+@Table(name = "demo", schema="saleshare")
 public class Demo{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "auto_id", unique = true, nullable = false)
+	@Column(name = "id", unique = true, nullable = false)
 	private int id;
 	
 	@Column(name="descs")
