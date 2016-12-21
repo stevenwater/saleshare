@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity
-@Table(name = "demo", schema="saleshare")
+@Table(name = "demo")
 public class Demo{
 	
 	@Id

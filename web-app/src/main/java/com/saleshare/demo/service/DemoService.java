@@ -1,10 +1,19 @@
 package com.saleshare.demo.service;
 
-import com.saleshare.common.service.BasicService;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.saleshare.common.service.BasicServiceImpl;
 import com.saleshare.demo.entity.Demo;
 
-public interface DemoService extends BasicService<Demo>{
-	
-	public void saveDoubleDemo(Demo demo);
+@Service
+public class DemoService extends BasicServiceImpl<Demo> {
+
+	@Transactional(readOnly = false,rollbackFor = { Exception.class, RuntimeException.class })
+	public void saveDoubleDemo(Demo demo) {
+		save(demo);
+		getSession().clear();
+		save(demo);
+	}
 
 }
